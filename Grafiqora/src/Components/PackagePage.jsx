@@ -49,7 +49,7 @@ export default function SocialMediaPackages() {
           </h2>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-snug md:leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight">
           What's Included In{" "}
           <span className="bg-pink-500 text-white px-2 rounded">Bespoke</span>{" "}
           Our Social{" "}
