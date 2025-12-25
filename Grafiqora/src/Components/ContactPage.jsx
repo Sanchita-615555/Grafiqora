@@ -3,10 +3,10 @@ import { Phone, Mail } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <div className="w-full min-h-screen bg-[#f8f2ec] flex flex-row md:flex-row relative overflow-hidden">
-      
+    <div className="w-full min-h-screen bg-[#f8f2ec] flex flex-row relative overflow-hidden">
+
       {/* Left Side - Text */}
-      <div className="flex-1 flex flex-col justify-center p-4 md:p-10 gap-3">
+      <div className="flex-1 flex flex-col justify-center p-4 md:p-10 gap-3 z-10">
         <h1 className="text-lg sm:text-xl md:text-3xl font-extrabold mb-2 inline-block border-l-4 border-pink-500 pl-3 bg-amber-200">
           READY TO WORK WITH US?
         </h1>
@@ -35,7 +35,7 @@ export default function ContactSection() {
       </div>
 
       {/* Right Side - Image */}
-      <div className="flex-1 min-h-screen">
+      <div className="flex-1 w-[50%] min-h-screen md:w-auto">
         <img
           src="https://images.pexels.com/photos/6032801/pexels-photo-6032801.jpeg"
           alt="Contact Visual"
@@ -50,3 +50,4 @@ export default function ContactSection() {
     </div>
   );
 }
+
