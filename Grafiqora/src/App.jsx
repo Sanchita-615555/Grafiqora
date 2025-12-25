@@ -1,7 +1,3 @@
-
-
-
-
 import React from "react";
 import LandingPage from "./Components/LandingPage";
 import BrandPage from "./Components/BrandPage";  // Add this line
