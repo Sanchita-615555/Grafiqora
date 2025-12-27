@@ -25,18 +25,18 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative">
+    <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-8">
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-22 py-2 rounded-full text-xl font-bold mt-6 mb-8  ">
+      <h2 className="bg-teal-600 text-white px-6 py-2 rounded-full text-xl font-bold mb-8">
         How We Work ?
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-4 gap-4 w-full max-w-7xl h-[50vh]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-7xl h-auto md:h-[50vh]">
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative rounded-xl shadow-md overflow-hidden ${
+            className={`relative rounded-xl shadow-md overflow-hidden md:${
               index % 2 === 0 ? "translate-y-6" : "-translate-y-6"
             }`}
           >
@@ -44,16 +44,13 @@ export default function HowWeWorkGrid() {
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-full object-cover"
+              className="w-full h-64 md:h-full object-cover"
             />
 
             {/* Overlay text */}
             <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-2">
-              {/* Uniform yellow box */}
               <div className="bg-yellow-300 w-full min-h-[28px] flex items-center justify-center rounded">
-                <h3 className="text-[11px] font-bold text-center">
-                  {step.title}
-                </h3>
+                <h3 className="text-[11px] font-bold text-center">{step.title}</h3>
               </div>
               <p className="mt-1 text-[10px] text-gray-700 leading-snug line-clamp-2">
                 {step.desc}
@@ -63,7 +60,7 @@ export default function HowWeWorkGrid() {
         ))}
       </div>
 
-      {/* Footer (bottom-right corner) */}
+      {/* Footer */}
       <p className="absolute bottom-2 right-4 text-xs font-semibold text-black-900 bg-green-300">
         Grafiqora
       </p>
