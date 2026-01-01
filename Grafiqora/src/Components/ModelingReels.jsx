@@ -22,29 +22,29 @@ export default function ModelingReels() {
 
   return (
     <div className="min-h-screen bg-[#f0f4f8] flex flex-col items-center p-6 space-y-8">
-     <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6
+      {/* Section Title */}
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6
                text-[#F5C77A] bg-black py-5 px-6 rounded-2xl shadow-lg tracking-wide">
-  MODELING & REELS CREATION
-</h2>
+        MODELING & REELS CREATION
+      </h2>
 
-
-
+      {/* Services List */}
       <div className="w-full max-w-5xl flex flex-col gap-8">
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative w-full h-[60vh] md:h-[70vh] rounded-lg overflow-hidden shadow-lg group"
+            className="flex flex-col rounded-lg overflow-hidden shadow-lg"
           >
             {/* Image */}
             <img
               src={service.img}
               alt={service.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-[60vh] md:h-[70vh] object-cover rounded-t-lg"
             />
 
-            {/* Overlay Text */}
-            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <h3 className="text-2xl md:text-4xl font-bold text-white text-center p-4 bg-black/60 rounded shadow-lg">
+            {/* Text Below Image */}
+            <div className="bg-white py-4 px-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
                 {service.title}
               </h3>
             </div>
