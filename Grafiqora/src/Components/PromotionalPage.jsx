@@ -25,13 +25,14 @@ export default function PromoVideoProduction() {
     <div className="min-h-screen w-full bg-gradient-to-b from-amber-50 to-amber-200 flex flex-col items-center py-16 px-4">
       
       {/* Centered Heading */}
-      <div className="mb-12 w-full flex justify-center">
-  <div className="bg-gradient-to-r from-yellow-400 via-amber-300 to-orange-400 px-6 py-4 rounded-3xl shadow-xl max-w-full text-center transform hover:scale-105 transition-transform duration-300">
-    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-wide whitespace-nowrap">
+      <div className="mb-12 w-full flex justify-center px-2">
+  <div className="bg-gradient-to-r from-yellow-400 via-amber-300 to-orange-400 px-4 py-3 rounded-3xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-wide text-center">
       PROMOTIONAL VIDEO PRODUCTION
     </h2>
   </div>
 </div>
+
 
 
       {/* Main Content: Image + Services */}
