@@ -27,7 +27,7 @@ export default function PromoVideoProduction() {
       {/* Centered Heading */}
       <div className="mb-12 w-full flex justify-center px-2">
   <div className="bg-gradient-to-r from-yellow-400 via-amber-300 to-orange-400 px-4 py-3 rounded-3xl shadow-xl transform hover:scale-105 transition-transform duration-300">
-    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-wide text-center">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black tracking-wide text-center">
       PROMOTIONAL VIDEO PRODUCTION
     </h2>
   </div>
