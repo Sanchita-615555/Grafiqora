@@ -32,27 +32,31 @@ export default function HowWeWorkGrid() {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-7xl h-auto md:h-[50vh]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-3xl h-auto md:h-[50vh]">
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative rounded-xl shadow-md overflow-hidden md:${
-              index % 2 === 0 ? "translate-y-6" : "-translate-y-6"
+            className={`relative rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 md:${
+              index % 2 === 0 ? "translate-y-4" : "-translate-y-4"
             }`}
           >
             {/* Image */}
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-64 md:h-full object-cover"
+              className="w-full h-56 md:h-full object-cover"
             />
 
             {/* Overlay text */}
             <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-2">
               <div className="bg-yellow-300 w-full min-h-[28px] flex items-center justify-center rounded">
-                <h3 className="text-[11px] font-bold text-center">{step.title}</h3>
+                <h3 className="text-xs font-bold text-center">
+                  {step.title}
+                </h3>
               </div>
-              <p className="mt-1 text-[10px] text-gray-700 leading-snug line-clamp-2">
+
+              {/* Description */}
+              <p className="mt-1 text-xs md:text-sm font-semibold text-emerald-700 leading-relaxed line-clamp-2">
                 {step.desc}
               </p>
             </div>
@@ -61,7 +65,7 @@ export default function HowWeWorkGrid() {
       </div>
 
       {/* Footer */}
-      <p className="absolute bottom-2 right-4 text-xs font-semibold text-black-900 bg-green-300">
+      <p className="absolute bottom-2 right-4 text-xs font-semibold text-black bg-green-300 px-2 py-1 rounded">
         Grafiqora
       </p>
     </div>
