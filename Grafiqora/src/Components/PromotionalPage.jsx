@@ -22,43 +22,47 @@ export default function PromoVideoProduction() {
   ];
 
   return (
-    <div className="h-screen w-full flex items-center justify-center overflow-hidden px-4 bg-amber-100">
-      {/* Main Container */}
-      <div className="w-full max-w-6xl flex items-center justify-between gap-6">
-        
-        {/* Left Section */}
-        <div className="flex flex-col items-center lg:items-start w-1/2">
-          {/* Title Box */}
-          <div className="bg-[#f8e9d2] px-3 py-2 rounded-md shadow-sm">
-            <h2 className="text-lg font-bold text-center lg:text-left px-3 py-2">
-              PROMOTIONAL VIDEO PRODUCTION
-            </h2>
-          </div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-amber-50 to-amber-200 flex flex-col items-center py-16 px-4">
+      
+      {/* Centered Heading */}
+      <div className="mb-12 w-full flex justify-center">
+  <div className="bg-gradient-to-r from-yellow-400 via-amber-300 to-orange-400 px-6 py-4 rounded-3xl shadow-xl max-w-full text-center transform hover:scale-105 transition-transform duration-300">
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-wide whitespace-nowrap">
+      PROMOTIONAL VIDEO PRODUCTION
+    </h2>
+  </div>
+</div>
 
-          {/* Image */}
-          <div className="mt-3">
-            <img
-              src="https://images.pexels.com/photos/33899322/pexels-photo-33899322.jpeg"
-              alt="Video Production"
-              className="rounded-md shadow-md w-[220px] lg:w-[220px]"
-            />
-          </div>
+
+      {/* Main Content: Image + Services */}
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row items-start lg:items-center gap-12">
+
+        {/* Left: Image */}
+        <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2">
+          <img
+            src="https://images.pexels.com/photos/33899322/pexels-photo-33899322.jpeg"
+            alt="Video Production"
+            className="rounded-3xl shadow-2xl w-full max-w-sm md:max-w-[320px] object-cover transform hover:scale-105 transition-transform duration-500"
+          />
         </div>
 
-        {/* Right Section */}
-        <div className="w-1/2 flex flex-col gap-3">
+        {/* Right: Services */}
+        <div className="w-full lg:w-1/2 flex flex-col gap-6">
           {services.map((service, index) => (
-            <div key={index} className="flex items-start gap-2">
-              <ArrowRight className="text-blue-600 mt-0.5 w-7 h-7" />
+            <div key={index} className="flex items-start gap-4 bg-gradient-to-r from-orange-100 via-amber-100 to-yellow-50 p-5 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <ArrowRight className="text-orange-500 mt-1 w-8 h-8 flex-shrink-0" />
               <div>
-                <h3 className="text-xs font-semibold">{service.title}</h3>
-                <p className="text-gray-700 text-[10px] leading-tight">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                   {service.desc}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
