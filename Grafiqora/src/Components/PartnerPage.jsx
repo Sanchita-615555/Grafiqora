@@ -9,7 +9,7 @@ const PartnerPage = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-[100vh] bg-green-100 overflow-auto box-border py-6">
+    <div className="relative w-full bg-green-100 min-h-[100vh] box-border py-6">
 
       {/* Background */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] pointer-events-none" />
@@ -23,7 +23,7 @@ const PartnerPage = () => {
       </div>
 
       {/* Hexagons Row */}
-      <div className="flex flex-row gap-4 overflow-x-auto mt-6 px-4 justify-center md:justify-start">
+      <div className="flex gap-4 mt-6 px-4 overflow-x-auto justify-start md:justify-start">
         {hexagons.map((item, idx) => (
           <div
             key={idx}
