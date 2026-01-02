@@ -1,4 +1,5 @@
 import React from "react";
+
 const PartnerPage = () => {
   const hexagons = [
     { text: "Affordable Packages", color: "bg-green-400" },
@@ -8,42 +9,70 @@ const PartnerPage = () => {
   ];
 
   return (
-    <div className="relative bg-green-100 h-screen w-full overflow-hidden p-6">
+    <div
+      className="relative w-full h-screen bg-green-100 
+                 overflow-hidden box-border"
+    >
       {/* Background */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] pointer-events-none" />
+      <div className="absolute inset-0 opacity-10 
+                      bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] 
+                      pointer-events-none" />
 
-      {/* Half-circle Title (Top Left) */}
-      <div className="absolute top-0 left-0 w-70 h-26 bg-green-900 text-white rounded-b-full shadow-lg flex flex-col items-center justify-center p-4">
-        <h1 className="text-xl md:text-2xl font-bold text-center">
+      {/* HEADER (FIXED HEIGHT = 96px) */}
+      <div
+        className="absolute top-0 left-0 
+                   w-72 h-24 
+                   bg-green-900 text-white 
+                   rounded-b-full shadow-lg 
+                   flex flex-col items-center justify-center"
+      >
+        <h1 className="text-xl font-bold leading-tight text-center">
           Partner with Brand Grafiqora
         </h1>
-        <p className="mt-1 text-sm md:text-base text-center">Why Partner?</p>
+        <p className="text-sm">Why Partner?</p>
       </div>
 
-      {/* Hexagon Boxes in one row (smaller size) */}
-      <div className="absolute top-36 left-6 flex flex-row gap-2">
-        {hexagons.map((item, idx) => (
-          <div
-            key={idx}
-            className={`${item.color} text-white font-semibold w-18 h-16 flex items-center justify-center shadow-md clip-hexagon text-[9px] text-center px-1`}
-          >
-            {item.text}
+      {/* CONTENT AREA = 100vh - 96px */}
+      <div
+        className="absolute left-0 top-24 w-full 
+                   h-[calc(100vh-96px)] 
+                   flex items-center justify-center"
+      >
+        <div className="flex flex-row gap-8 items-center">
+
+          {/* Hexagons */}
+          <div className="grid grid-cols-4 gap-3">
+            {hexagons.map((item, idx) => (
+              <div
+                key={idx}
+                className={`${item.color} text-white font-semibold 
+                            w-24 h-20 
+                            flex items-center justify-center 
+                            shadow-md clip-hexagon 
+                            text-xs text-center px-1`}
+              >
+                {item.text}
+              </div>
+            ))}
           </div>
-        ))}
+
+          {/* List Box */}
+          <div className="bg-green-900 text-white 
+                          rounded-2xl shadow-lg 
+                          p-4 w-72">
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              <li>End-to-End Solutions for your needs</li>
+              <li>Tailored strategies for social media platforms</li>
+              <li>Creative design meets effective marketing strategy</li>
+              <li>Affordable packages with flexible pricing</li>
+              <li>Speedy delivery without sacrificing quality</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
 
-      {/* List Box (Right side, stuck to edge) */}
-      <div className="absolute top-33 right-0 bg-green-900 text-white rounded-2xl shadow-lg p-2 w-64 h-56">
-        <ul className="list-disc list-inside space-y-1 text-left text-xs">
-          <li>End-to-End Solutions for your needs</li>
-          <li>Tailored strategies for social media platforms</li>
-          <li>Creative design meets effective marketing strategy</li>
-          <li>Affordable packages with flexible pricing</li>
-          <li>Speedy delivery without sacrificing quality</li>
-        </ul>
-      </div>
-
-      {/* Hexagon CSS */}
+      {/* Hexagon Shape */}
       <style>
         {`
           .clip-hexagon {
@@ -52,6 +81,10 @@ const PartnerPage = () => {
               100% 50%, 75% 93.3%,
               25% 93.3%, 0% 50%
             );
+          }
+
+          body {
+            margin: 0;
           }
         `}
       </style>

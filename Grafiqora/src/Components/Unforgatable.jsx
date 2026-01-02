@@ -13,7 +13,7 @@ export default function BowlShapeLayout() {
         LET’S MAKE YOUR BRAND UNFORGETTABLE.
       </h1>
 
-      {/* Bowl Shape (DESIGN SAME) */}
+      {/* Bowl Shape */}
       <div
         className="relative w-[80%] sm:w-[65%] md:w-[55%] 
                    min-h-[220px] sm:min-h-[240px] 
