@@ -9,70 +9,52 @@ const PartnerPage = () => {
   ];
 
   return (
-    <div
-      className="relative w-full h-screen bg-green-100 
-                 overflow-hidden box-border"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 opacity-10 
-                      bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] 
-                      pointer-events-none" />
+    <div className="relative w-full min-h-screen bg-green-100 overflow-auto box-border">
 
-      {/* HEADER (FIXED HEIGHT = 96px) */}
-      <div
-        className="absolute top-0 left-0 
-                   w-72 h-24 
-                   bg-green-900 text-white 
-                   rounded-b-full shadow-lg 
-                   flex flex-col items-center justify-center"
-      >
-        <h1 className="text-xl font-bold leading-tight text-center">
+      {/* Background */}
+      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] pointer-events-none" />
+
+      {/* Header Half Circle */}
+      <div className="mx-auto w-92 h-28 bg-green-900 text-white rounded-b-full shadow-lg flex flex-col items-center justify-center z-20 px-4 mt-4">
+        <h1 className="text-lg md:text-2xl font-bold text-center leading-tight">
           Partner with Brand Grafiqora
         </h1>
-        <p className="text-sm">Why Partner?</p>
+        <p className="text-xs md:text-sm mt-1">Why Partner?</p>
       </div>
 
-      {/* CONTENT AREA = 100vh - 96px */}
-      <div
-        className="absolute left-0 top-24 w-full 
-                   h-[calc(100vh-96px)] 
-                   flex items-center justify-center"
-      >
-        <div className="flex flex-row gap-8 items-center">
+      {/* Hexagons + List */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-0 mt-6">
 
-          {/* Hexagons */}
-          <div className="grid grid-cols-4 gap-3">
-            {hexagons.map((item, idx) => (
-              <div
-                key={idx}
-                className={`${item.color} text-white font-semibold 
-                            w-24 h-20 
-                            flex items-center justify-center 
-                            shadow-md clip-hexagon 
-                            text-xs text-center px-1`}
-              >
-                {item.text}
-              </div>
-            ))}
-          </div>
-
-          {/* List Box */}
-          <div className="bg-green-900 text-white 
-                          rounded-2xl shadow-lg 
-                          p-4 w-72">
-            <ul className="list-disc list-inside space-y-1 text-sm">
-              <li>End-to-End Solutions for your needs</li>
-              <li>Tailored strategies for social media platforms</li>
-              <li>Creative design meets effective marketing strategy</li>
-              <li>Affordable packages with flexible pricing</li>
-              <li>Speedy delivery without sacrificing quality</li>
-            </ul>
-          </div>
-
+        {/* Hexagons Horizontal */}
+        <div className="flex flex-row gap-4 overflow-x-auto md:overflow-visible">
+          {hexagons.map((item, idx) => (
+            <div
+              key={idx}
+              className={`${item.color} text-white font-semibold 
+                          w-28 h-20 flex items-center justify-center 
+                          shadow-md clip-hexagon text-xs md:text-sm text-center px-2
+                          flex-shrink-0
+                          transition-transform duration-200 hover:-translate-y-1`}
+            >
+              {item.text}
+            </div>
+          ))}
         </div>
+
+        {/* List Box with perfectly aligned list */}
+        <div className="bg-green-900 text-white rounded-2xl shadow-lg p-2 w-92 md:w-80 flex-shrink-0 mt-6 md:mt-0 md:self-center">
+          <ul className="list-disc list-outside pl-15 space-y-2 text-xs md:text-sm">
+            <li>End-to-End Solutions for your needs</li>
+            <li>Tailored strategies for social media platforms</li>
+            <li>Creative design meets effective marketing strategy</li>
+            <li>Affordable packages with flexible pricing</li>
+            <li>Speedy delivery without sacrificing quality</li>
+          </ul>
+        </div>
+
       </div>
 
-      {/* Hexagon Shape */}
+      {/* Hexagon Clip Path */}
       <style>
         {`
           .clip-hexagon {
@@ -88,6 +70,7 @@ const PartnerPage = () => {
           }
         `}
       </style>
+
     </div>
   );
 };
