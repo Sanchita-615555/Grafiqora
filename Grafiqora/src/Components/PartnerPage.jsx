@@ -9,7 +9,7 @@ const PartnerPage = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-[100vh] bg-green-100 overflow-auto box-border">
+    <div className="relative w-full min-h-screen bg-green-100 overflow-auto box-border">
 
       {/* Background */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] pointer-events-none" />
@@ -23,10 +23,10 @@ const PartnerPage = () => {
       </div>
 
       {/* Hexagons + List */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 md:gap-12 px-4 md:px-0 mt-6">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-0 mt-6">
 
         {/* Hexagons Horizontal */}
-        <div className="flex flex-row gap-4 overflow-x-auto md:overflow-visible justify-center w-full md:w-auto">
+        <div className="flex flex-row gap-4 overflow-x-auto md:overflow-visible">
           {hexagons.map((item, idx) => (
             <div
               key={idx}
@@ -41,8 +41,8 @@ const PartnerPage = () => {
           ))}
         </div>
 
-        {/* List Box */}
-        <div className="bg-green-900 text-white rounded-2xl shadow-lg p-4 w-full md:w-80 flex-shrink-0 mt-4 md:mt-0 md:self-center">
+        {/* List Box with perfectly aligned list */}
+        <div className="bg-green-900 text-white rounded-2xl shadow-lg p-2 w-full md:w-80 flex-shrink-0 mt-6 md:mt-0 md:self-center">
           <ul className="list-disc list-outside pl-5 space-y-2 text-xs md:text-sm">
             <li>End-to-End Solutions for your needs</li>
             <li>Tailored strategies for social media platforms</li>
