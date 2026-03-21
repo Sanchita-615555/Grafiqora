@@ -13,7 +13,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <div
-      className="w-full min-h-[100vh] bg-cover bg-center px-4 sm:px-6 lg:px-12 py-6"
+      className="w-full min-h-[100vh] flex flex-col bg-cover bg-center px-4 sm:px-6 lg:px-12 py-6"
       style={{
         backgroundImage:
           "url('https://media.istockphoto.com/id/1308610989/photo/shot-of-a-young-female-call-center-agent-working-in-office-stock-photo.jpg?b=1&s=612x612&w=0&k=20&c=DrM7pyMYJXK1cfPMdlXgKSAvoGrd-JdYQOwa7GaF_dE=')",
@@ -28,7 +28,7 @@ export default function ServicesPage() {
       </h2>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         {services.map((service, index) => (
           <div
