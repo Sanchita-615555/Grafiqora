@@ -2,19 +2,10 @@ import React from "react";
 
 export default function BrandPage() {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row bg-[#FCEEDF] px-4 sm:px-6 lg:px-12">
+    <div className="min-h-screen flex flex-col bg-[#FCEEDF] px-4 sm:px-6 lg:px-12 py-6">
 
-      {/* Left Side: Image */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center mb-6 lg:mb-0">
-        <img
-          src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-          alt="Team meeting"
-          className="w-full max-w-md lg:max-w-full h-auto object-cover rounded-xl shadow-lg"
-        />
-      </div>
-
-      {/* Right Side: Text */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center relative lg:pl-10">
+      {/* Text Section First */}
+      <div className="w-full flex flex-col justify-center mb-6">
 
         <h1 className="text-2xl sm:text-3xl font-bold font-serif mb-3 bg-amber-300 inline-block px-2">
           Grafiqora
@@ -36,11 +27,15 @@ export default function BrandPage() {
           design solutions crafted to make your brand unforgettable.
         </p>
 
-        {/* Bottom Right Box */}
-        <div className="absolute bottom-3 right-3 bg-green-300 text-black px-2 py-1 rounded-md text-xs sm:text-sm font-bold shadow-md">
-          Grafiqora
-        </div>
+      </div>
 
+      {/* Image Section Below */}
+      <div className="w-full flex items-center justify-center">
+        <img
+          src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+          alt="Team meeting"
+          className="w-full max-w-md lg:max-w-3xl h-auto object-cover rounded-xl shadow-lg"
+        />
       </div>
 
     </div>
