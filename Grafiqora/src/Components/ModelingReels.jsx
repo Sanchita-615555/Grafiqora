@@ -21,36 +21,52 @@ export default function ModelingReels() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f0f4f8] flex flex-col items-center p-6 space-y-8">
-      {/* Section Title */}
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6
-               text-[#F5C77A] bg-black py-5 px-6 rounded-2xl shadow-lg tracking-wide">
-        MODELING & REELS CREATION
-      </h2>
+    <div className="w-full min-h-[100vh] bg-[#f0f4f8] flex flex-col items-center px-4 sm:px-6 lg:px-12 py-6 space-y-8">
 
-      {/* Services List */}
-      <div className="w-full max-w-5xl flex flex-col gap-8">
+      {/* Title */}
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-center
+               text-black bg-gradient-to-r from-yellow-400 via-amber-300 to-orange-400
+               py-5 px-6 rounded-2xl shadow-lg tracking-wide">
+  MODELING & REELS CREATION
+</h2>
+
+      {/* Services */}
+      <div className="w-full flex flex-col gap-10">
+
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col rounded-lg overflow-hidden shadow-lg"
+            className="flex flex-col rounded-xl overflow-hidden shadow-xl"
           >
-            {/* Image */}
-            <img
-              src={service.img}
-              alt={service.title}
-              className="w-full h-[60vh] md:h-[70vh] object-cover rounded-t-lg"
-            />
+            {/* Image Section */}
+            <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden">
 
-            {/* Text Below Image */}
-            <div className="bg-white py-4 px-6 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+              {/* Blurred Background */}
+              <img
+                src={service.img}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover blur-xl scale-110"
+              />
+
+              {/* Main Image */}
+              <img
+                src={service.img}
+                alt={service.title}
+                className="relative w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="bg-white py-5 text-center">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
                 {service.title}
               </h3>
             </div>
           </div>
         ))}
+
       </div>
+
     </div>
   );
 }
