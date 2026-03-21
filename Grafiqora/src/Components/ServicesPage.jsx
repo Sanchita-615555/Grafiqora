@@ -7,7 +7,7 @@ const services = [
   "POSTERS & BANNERS",
   "BROCHURES & FLYERS",
   "YOUTUBE THUMBNAILS",
-  "SOCIAL MEDIA POSTS",
+ 
 ];
 
 export default function ServicesPage() {
