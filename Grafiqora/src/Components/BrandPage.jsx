@@ -20,7 +20,7 @@ export default function BrandPage() {
           an experience that connects, inspires, and lasts.
         </p>
 
-        <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl">
+        <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
           In today’s competitive digital era, standing out requires more than
           just presence. It requires strategy, creativity, and consistency.
           That’s where we come in — with end-to-end social media marketing and
@@ -30,20 +30,11 @@ export default function BrandPage() {
       </div>
 
       {/* Image Section */}
-      <div className="w-full flex justify-center">
+      <div className="w-full">
         <img
           src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
           alt="Team meeting"
-          className="
-            w-full 
-            sm:w-[90%] 
-            lg:w-[80%] 
-            xl:w-[70%]
-            h-auto 
-            object-cover 
-            rounded-xl 
-            shadow-lg
-          "
+          className="w-full h-auto object-cover rounded-xl shadow-lg"
         />
       </div>
 
