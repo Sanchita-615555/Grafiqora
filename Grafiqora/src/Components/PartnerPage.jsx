@@ -9,35 +9,35 @@ const PartnerPage = () => {
   ];
 
   return (
-    <div className="relative w-full bg-green-100 py-10 px-4 lg:px-10">
+    <div className="relative w-full bg-green-100 py-12 px-4 lg:px-12">
 
       {/* Background */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] pointer-events-none" />
 
       {/* Header */}
-      <div className="mx-auto w-full max-w-md h-32 bg-green-900 text-white 
+      <div className="mx-auto w-full max-w-lg lg:max-w-2xl h-32 bg-green-900 text-white 
                       rounded-b-full shadow-lg flex flex-col items-center justify-center px-4">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-center">
           Partner with Brand Grafiqora
         </h1>
-        <p className="text-sm mt-1">Why Partner?</p>
+        <p className="text-sm md:text-base mt-1">Why Partner?</p>
       </div>
 
       {/* Hexagon Grid */}
       <div
-        className="grid gap-8 mt-10 w-full max-w-[1800px] mx-auto
-                   [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]"
+        className="grid gap-10 mt-12 w-full max-w-[2000px] mx-auto
+                   [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]"
       >
         {hexagons.map((item, idx) => (
           <div
             key={idx}
             className={`${item.color} text-white font-semibold 
-                        h-28 md:h-32 lg:h-36 xl:h-40
+                        h-32 md:h-36 lg:h-44 xl:h-52
                         flex items-center justify-center 
-                        shadow-lg clip-hexagon 
-                        text-sm md:text-base lg:text-lg xl:text-xl
+                        shadow-xl clip-hexagon 
+                        text-base md:text-lg lg:text-xl xl:text-2xl
                         text-center px-4
-                        transition-transform duration-300 hover:-translate-y-2`}
+                        transition-transform duration-300 hover:-translate-y-3`}
           >
             {item.text}
           </div>
@@ -45,10 +45,11 @@ const PartnerPage = () => {
       </div>
 
       {/* List Box */}
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-14">
         <div className="bg-green-900 text-white rounded-2xl shadow-xl 
-                        p-6 w-full max-w-md">
-          <ul className="list-disc pl-5 space-y-3 text-sm md:text-base">
+                        p-8 w-full max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
+          <ul className="list-disc pl-6 space-y-4 
+                         text-sm md:text-base lg:text-lg xl:text-xl">
             <li>End-to-End Solutions for your needs</li>
             <li>Tailored strategies for social media platforms</li>
             <li>Creative design meets effective marketing strategy</li>
