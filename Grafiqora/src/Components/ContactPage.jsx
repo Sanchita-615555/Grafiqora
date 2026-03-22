@@ -11,7 +11,7 @@ export default function ContactSection() {
         {/* Heading */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
                        font-extrabold border-l-4 border-pink-500 pl-4 bg-amber-200 w-fit
-                       mt-10 md:mt-0">
+                       mt-6 md:mt-0">
           READY TO WORK WITH US?
         </h1>
 
