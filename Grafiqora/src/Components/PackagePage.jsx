@@ -37,19 +37,22 @@ export default function SocialMediaPackages() {
   ];
 
   return (
-    <div className="w-screen h-screen flex flex-col md:flex-row bg-blue-50">
+    <div className="w-full bg-blue-50 flex flex-col md:flex-row px-6 lg:px-12 py-12 gap-10">
+
       {/* Left Side */}
-      <div className="md:flex-1 flex flex-col justify-start items-start p-6 md:p-10 overflow-visible">
-        <div className="flex items-center gap-3 mb-4 flex-wrap">
-          <span className="bg-yellow-300 px-3 py-1 rounded text-sm font-semibold">
+      <div className="md:flex-1 flex flex-col justify-center">
+
+        <div className="flex items-center gap-3 mb-6 flex-wrap">
+          <span className="bg-yellow-300 px-4 py-1 rounded text-sm font-semibold">
             Monthly
           </span>
-          <h2 className="bg-purple-500 text-white px-3 py-1 rounded text-sm font-semibold">
+          <h2 className="bg-purple-500 text-white px-4 py-1 rounded text-sm font-semibold">
             Package Comparison
           </h2>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                       font-extrabold leading-snug">
           What's Included In{" "}
           <span className="bg-pink-500 text-white px-2 rounded">Bespoke</span>{" "}
           Our Social{" "}
@@ -58,23 +61,33 @@ export default function SocialMediaPackages() {
       </div>
 
       {/* Right Side */}
-      <div className="md:flex-1 flex flex-col p-4 gap-4 md:gap-6 overflow-y-auto h-[calc(100vh-0px)] bg-amber-100">
+      <div className="md:flex-1 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
         {packages.map((pkg, idx) => (
           <div
             key={idx}
-            className="border border-gray-300 rounded-xl p-4 flex flex-col gap-2 w-full text-sm md:text-base bg-white shadow-md hover:shadow-lg transition-shadow duration-200"
+            className="border border-gray-200 rounded-2xl p-6 
+                       flex flex-col gap-3 
+                       bg-white shadow-lg hover:shadow-xl 
+                       transition duration-300"
           >
-            <h3 className="text-blue-600 font-bold text-sm md:text-base">
+            <h3 className="text-blue-600 font-bold text-lg lg:text-xl">
               {pkg.name} – {pkg.price}
             </h3>
-            <p className="text-gray-700">{pkg.desc}</p>
-            <ul className="list-disc list-inside text-gray-700 space-y-1">
+
+            <p className="text-gray-700 text-sm md:text-base">
+              {pkg.desc}
+            </p>
+
+            <ul className="list-disc list-inside text-gray-700 
+                           space-y-2 text-sm md:text-base">
               {pkg.features.map((feat, i) => (
                 <li key={i}>{feat}</li>
               ))}
             </ul>
           </div>
         ))}
+
       </div>
     </div>
   );
