@@ -25,44 +25,44 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="h-screen bg-[#fcefe7] flex flex-col items-center justify-center px-4 overflow-hidden">
+    <div className="bg-[#fcefe7] flex flex-col items-center px-6 py-12">
 
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-6 py-2 rounded-full 
-                     text-xl md:text-2xl lg:text-3xl font-bold 
-                     mb-6">
+      <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
+                     text-2xl md:text-3xl lg:text-4xl font-bold 
+                     mb-12">
         How We Work ?
       </h2>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
-                      gap-4 w-full max-w-[1200px]">
+                      gap-8 w-full max-w-[1500px]">
 
         {steps.map((step) => (
           <div
             key={step.title}
-            className="relative rounded-xl shadow-md overflow-hidden 
+            className="relative rounded-2xl shadow-xl overflow-hidden 
                        transition-transform duration-300 hover:scale-105"
           >
             {/* Image */}
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-44 md:h-52 lg:h-56 object-cover"
+              className="w-full h-72 md:h-80 xl:h-[420px] object-cover"
             />
 
             {/* Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-2">
+            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-4">
 
               {/* Title */}
-              <div className="bg-yellow-300 w-full py-1 rounded">
-                <h3 className="text-xs md:text-sm font-bold text-center">
+              <div className="bg-yellow-300 w-full py-2 rounded">
+                <h3 className="text-base md:text-lg xl:text-xl font-bold text-center">
                   {step.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="mt-1 text-xs md:text-sm font-semibold 
+              <p className="mt-2 text-sm md:text-base xl:text-lg font-semibold 
                             text-emerald-700 leading-snug">
                 {step.desc}
               </p>
