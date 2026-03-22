@@ -52,7 +52,7 @@ export default function BowlShapeLayout() {
                         rounded-2xl shadow-xl overflow-hidden 
                         transform hover:scale-105 transition duration-300">
           <img
-            src="https://media.istockphoto.com/id/2171092251/photo/digital-marketing-commerce-online-sale-concept-businessman-using-laptop-with-ads-dashboard.jpg"
+            src="https://media.istockphoto.com/id/2171092251/photo/digital-marketing-commerce-online-sale-concept-businessman-using-laptop-with-ads-dashboard.jpg?b=1&s=612x612&w=0&k=20&c=FB70wrRteu7eMZ9EsG4sFnYOlSRnSozMTylDWEpcYgM="
             alt="Left Box"
             className="w-full h-full object-cover"
           />
