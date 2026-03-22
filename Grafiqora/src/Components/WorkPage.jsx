@@ -28,14 +28,16 @@ export default function HowWeWorkGrid() {
     <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-12">
 
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-5 py-3 rounded-full 
-                     text-2xl md:text-3xl lg:text-4xl font-bold mb-12">
+      <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
+                     text-2xl md:text-3xl lg:text-4xl font-bold 
+                     mb-16 xl:mb-24">
         How We Work ?
       </h2>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
-                      gap-8 w-full max-w-[1500px]">
+                      gap-8 w-full max-w-[1500px] 
+                      mt-6 xl:mt-16">
 
         {steps.map((step, index) => (
           <div
