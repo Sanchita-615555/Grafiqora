@@ -28,7 +28,7 @@ export default function HowWeWorkGrid() {
     <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-12">
 
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
+      <h2 className="bg-teal-600 text-white px-5 py-3 rounded-full 
                      text-2xl md:text-3xl lg:text-4xl font-bold mb-12">
         How We Work ?
       </h2>
