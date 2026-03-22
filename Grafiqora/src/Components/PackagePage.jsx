@@ -39,10 +39,10 @@ export default function SocialMediaPackages() {
   return (
     <div className="w-full bg-blue-50 flex flex-col md:flex-row px-6 lg:px-12 py-12 gap-10">
 
-      {/* Left Side */}
-      <div className="md:flex-1 flex flex-col justify-center">
+      {/* Left Side (FIXED GAP) */}
+      <div className="md:flex-1 flex flex-col justify-start gap-6 pt-4 lg:pt-10">
 
-        <div className="flex items-center gap-3 mb-6 flex-wrap">
+        <div className="flex items-center gap-3 flex-wrap">
           <span className="bg-yellow-300 px-4 py-1 rounded text-sm font-semibold">
             Monthly
           </span>
