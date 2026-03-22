@@ -25,10 +25,10 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="bg-[#fcefe7] flex flex-col items-center px-6 py-12">
+    <div className="bg-[#fcefe7] flex flex-col items-center px-6 lg:px-12 py-12">
 
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
+      <h2 className="bg-teal-600 text-white px-10 py-3 rounded-full 
                      text-2xl md:text-3xl lg:text-4xl font-bold 
                      mb-12">
         How We Work ?
@@ -36,7 +36,7 @@ export default function HowWeWorkGrid() {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
-                      gap-8 w-full max-w-[1500px]">
+                      gap-10 w-full max-w-[1800px]">
 
         {steps.map((step) => (
           <div
@@ -48,21 +48,21 @@ export default function HowWeWorkGrid() {
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-72 md:h-80 xl:h-[420px] object-cover"
+              className="w-full h-80 md:h-96 xl:h-[480px] object-cover"
             />
 
             {/* Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-4">
+            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-5">
 
               {/* Title */}
               <div className="bg-yellow-300 w-full py-2 rounded">
-                <h3 className="text-base md:text-lg xl:text-xl font-bold text-center">
+                <h3 className="text-lg xl:text-xl font-bold text-center">
                   {step.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="mt-2 text-sm md:text-base xl:text-lg font-semibold 
+              <p className="mt-2 text-base xl:text-lg font-semibold 
                             text-emerald-700 leading-snug">
                 {step.desc}
               </p>
