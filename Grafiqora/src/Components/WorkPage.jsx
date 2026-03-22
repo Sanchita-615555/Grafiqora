@@ -25,44 +25,46 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-10">
+    <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-12">
 
       {/* Title */}
       <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
-                     text-2xl md:text-3xl font-bold mb-10">
+                     text-2xl md:text-3xl lg:text-4xl font-bold mb-12">
         How We Work ?
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-                      gap-6 w-full max-w-7xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
+                      gap-8 w-full max-w-[1500px]">
 
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative rounded-2xl shadow-lg overflow-hidden 
+            className={`relative rounded-2xl shadow-xl overflow-hidden 
                         transition-transform duration-300 hover:scale-105
-                        ${index % 2 === 0 ? "lg:translate-y-10" : "lg:-translate-y-10"}`}
+                        ${index % 2 === 0 
+                          ? "xl:translate-y-16" 
+                          : "xl:-translate-y-16"}`}
           >
             {/* Image */}
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-64 md:h-72 lg:h-80 object-cover"
+              className="w-full h-72 md:h-80 xl:h-[420px] object-cover"
             />
 
             {/* Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-3">
+            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-4">
 
               {/* Title */}
-              <div className="bg-yellow-300 w-full py-1 rounded">
-                <h3 className="text-sm md:text-base font-bold text-center">
+              <div className="bg-yellow-300 w-full py-2 rounded">
+                <h3 className="text-base md:text-lg xl:text-xl font-bold text-center">
                   {step.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="mt-2 text-sm md:text-base font-semibold 
+              <p className="mt-2 text-sm md:text-base xl:text-lg font-semibold 
                             text-emerald-700 leading-snug">
                 {step.desc}
               </p>
