@@ -25,38 +25,45 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-8">
+    <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-10">
+
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-6 py-2 rounded-full text-xl font-bold mb-8">
+      <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
+                     text-2xl md:text-3xl font-bold mb-10">
         How We Work ?
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-3xl h-auto md:h-[50vh]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+                      gap-6 w-full max-w-7xl">
+
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`relative rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 md:${
-              index % 2 === 0 ? "translate-y-4" : "-translate-y-4"
-            }`}
+            className={`relative rounded-2xl shadow-lg overflow-hidden 
+                        transition-transform duration-300 hover:scale-105
+                        ${index % 2 === 0 ? "lg:translate-y-10" : "lg:-translate-y-10"}`}
           >
             {/* Image */}
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-56 md:h-full object-cover"
+              className="w-full h-64 md:h-72 lg:h-80 object-cover"
             />
 
-            {/* Overlay text */}
-            <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-2">
-              <div className="bg-yellow-300 w-full min-h-[28px] flex items-center justify-center rounded">
-                <h3 className="text-xs font-bold text-center">
+            {/* Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-3">
+
+              {/* Title */}
+              <div className="bg-yellow-300 w-full py-1 rounded">
+                <h3 className="text-sm md:text-base font-bold text-center">
                   {step.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="mt-1 text-xs md:text-sm font-semibold text-emerald-700 leading-relaxed line-clamp-2">
+              <p className="mt-2 text-sm md:text-base font-semibold 
+                            text-emerald-700 leading-snug">
                 {step.desc}
               </p>
             </div>
@@ -65,7 +72,8 @@ export default function HowWeWorkGrid() {
       </div>
 
       {/* Footer */}
-      <p className="absolute bottom-2 right-4 text-xs font-semibold text-black bg-green-300 px-2 py-1 rounded">
+      <p className="absolute bottom-3 right-4 text-sm font-semibold text-black 
+                    bg-green-300 px-3 py-1 rounded">
         Grafiqora
       </p>
     </div>
