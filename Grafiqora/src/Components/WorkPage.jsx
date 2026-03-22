@@ -25,47 +25,44 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="bg-[#fcefe7] flex flex-col items-center px-4 relative py-6">
+    <div className="h-screen bg-[#fcefe7] flex flex-col items-center justify-center px-4 overflow-hidden">
 
       {/* Title */}
-      <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
-                     text-2xl md:text-3xl lg:text-4xl font-bold 
-                     mb-10 xl:mb-12">
+      <h2 className="bg-teal-600 text-white px-6 py-2 rounded-full 
+                     text-xl md:text-2xl lg:text-3xl font-bold 
+                     mb-6">
         How We Work ?
       </h2>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
-                      gap-6 w-full max-w-[1400px]">
+                      gap-4 w-full max-w-[1200px]">
 
-        {steps.map((step, index) => (
+        {steps.map((step) => (
           <div
-            key={index}
-            className={`relative rounded-xl shadow-lg overflow-hidden 
-                        transition-transform duration-300 hover:scale-105
-                        ${index % 2 === 0 
-                          ? "xl:translate-y-8" 
-                          : "xl:-translate-y-8"}`}
+            key={step.title}
+            className="relative rounded-xl shadow-md overflow-hidden 
+                       transition-transform duration-300 hover:scale-105"
           >
             {/* Image */}
             <img
               src={step.img}
               alt={step.title}
-              className="w-full h-60 md:h-64 xl:h-[320px] object-cover"
+              className="w-full h-44 md:h-52 lg:h-56 object-cover"
             />
 
             {/* Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-3">
+            <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-2">
 
               {/* Title */}
               <div className="bg-yellow-300 w-full py-1 rounded">
-                <h3 className="text-sm md:text-base xl:text-lg font-bold text-center">
+                <h3 className="text-xs md:text-sm font-bold text-center">
                   {step.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="mt-1 text-xs md:text-sm xl:text-base font-semibold 
+              <p className="mt-1 text-xs md:text-sm font-semibold 
                             text-emerald-700 leading-snug">
                 {step.desc}
               </p>
