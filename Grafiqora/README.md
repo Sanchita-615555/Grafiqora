@@ -1,8 +1,8 @@
-Grafiqora
+Grafiqora Project:
 
 A React-based web project designed to showcase services, features, and modern UI design with responsive layout.
 
-🚀 Features
+🚀 Features:
 
 Built with React + Tailwind CSS
 
@@ -11,14 +11,14 @@ Responsive design (works on mobile, tablet, desktop)
 Clean and modern design
 
 
-🛠 Tech Stack
+🛠 Tech Stack:
 
 React.js
 
 Tailwind CSS
 
 
-📂 Project Structure
+📂 Project Structure:
 
 Grafiqora/
 │-- src/
@@ -29,21 +29,13 @@ Grafiqora/
 │-- package.json
 │-- README.md
 
-⚡ Getting Started
+⚡ Getting Started :
 
-1. Clone this repository:
+1. cd Grafiqora
+2. Install dependencies:
+   npm install
+3. npm run dev
+4. Open in browser:
 
-
-2. Navigate to the project folder:
-
-cd Grafiqora
-
-
-3. Install dependencies:
-
-npm install
-
-
-4. Start development server:
-
-5. Open in browser:
+📂 Project Link :
+   https://grafiqora.vercel.app/
