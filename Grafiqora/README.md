@@ -1,8 +1,8 @@
-Grafiqora Project:
+Grafiqora Project :
 
 A React-based web project designed to showcase services, features, and modern UI design with responsive layout.
 
-🚀 Features:
+🚀 Features :
 
 Built with React + Tailwind CSS
 
@@ -11,14 +11,14 @@ Responsive design (works on mobile, tablet, desktop)
 Clean and modern design
 
 
-🛠 Tech Stack:
+🛠 Tech Stack :
 
 React.js
 
 Tailwind CSS
 
 
-📂 Project Structure:
+📂 Project Structure :
 
 Grafiqora/
 │-- src/
