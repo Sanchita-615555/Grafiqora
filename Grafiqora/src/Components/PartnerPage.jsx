@@ -9,39 +9,44 @@ const PartnerPage = () => {
   ];
 
   return (
-    <div className="relative w-full bg-green-100 overflow-auto box-border py-6 md:min-h-screen">
+    <div className="relative w-full bg-green-100 py-10 px-4 lg:px-10">
 
       {/* Background */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] pointer-events-none" />
 
-      {/* Header Half Circle */}
-      <div className="mx-auto w-80 md:w-92 h-28 bg-green-900 text-white rounded-b-full shadow-lg flex flex-col items-center justify-center z-20 px-4">
-        <h1 className="text-lg md:text-2xl font-bold text-center leading-tight">
+      {/* Header */}
+      <div className="mx-auto w-full max-w-md h-32 bg-green-900 text-white 
+                      rounded-b-full shadow-lg flex flex-col items-center justify-center px-4">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">
           Partner with Brand Grafiqora
         </h1>
-        <p className="text-xs md:text-sm mt-1">Why Partner?</p>
+        <p className="text-sm mt-1">Why Partner?</p>
       </div>
 
-      {/* Hexagons Row */}
-      <div className="flex gap-4 mt-6 px-4 overflow-x-auto justify-start">
+      {/* Hexagons */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 
+                      mt-10 max-w-6xl mx-auto">
+
         {hexagons.map((item, idx) => (
           <div
             key={idx}
             className={`${item.color} text-white font-semibold 
-                        w-28 h-20 flex items-center justify-center 
-                        shadow-md clip-hexagon text-xs md:text-sm text-center px-2
-                        flex-shrink-0
-                        transition-transform duration-200 hover:-translate-y-1`}
+                        w-full h-24 md:h-28 lg:h-32
+                        flex items-center justify-center 
+                        shadow-lg clip-hexagon text-xs md:text-sm lg:text-base 
+                        text-center px-3
+                        transition-transform duration-300 hover:-translate-y-2`}
           >
             {item.text}
           </div>
         ))}
       </div>
 
-      {/* List Box Centered */}
-      <div className="flex justify-center mt-6 px-4 md:px-0">
-        <div className="bg-green-900 text-white rounded-2xl shadow-lg p-4 w-full md:w-80">
-          <ul className="list-disc list-outside pl-5 space-y-2 text-xs md:text-sm">
+      {/* List Box */}
+      <div className="flex justify-center mt-10">
+        <div className="bg-green-900 text-white rounded-2xl shadow-xl 
+                        p-6 w-full max-w-md">
+          <ul className="list-disc pl-5 space-y-3 text-sm md:text-base">
             <li>End-to-End Solutions for your needs</li>
             <li>Tailored strategies for social media platforms</li>
             <li>Creative design meets effective marketing strategy</li>
@@ -51,7 +56,7 @@ const PartnerPage = () => {
         </div>
       </div>
 
-      {/* Hexagon Clip Path */}
+      {/* Hexagon Shape */}
       <style>
         {`
           .clip-hexagon {
@@ -60,9 +65,6 @@ const PartnerPage = () => {
               100% 50%, 75% 93.3%,
               25% 93.3%, 0% 50%
             );
-          }
-          body {
-            margin: 0;
           }
         `}
       </style>
