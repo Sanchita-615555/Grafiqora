@@ -25,19 +25,18 @@ export default function HowWeWorkGrid() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fcefe7] flex flex-col items-center px-4 relative py-12">
+    <div className="bg-[#fcefe7] flex flex-col items-center px-4 relative py-6">
 
       {/* Title */}
       <h2 className="bg-teal-600 text-white px-8 py-3 rounded-full 
                      text-2xl md:text-3xl lg:text-4xl font-bold 
-                     mb-12 xl:mb-16">
+                     mb-10 xl:mb-12">
         How We Work ?
       </h2>
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
-                      gap-6 w-full max-w-[1400px] 
-                      mt-2 xl:-mt-4">
+                      gap-6 w-full max-w-[1400px]">
 
         {steps.map((step, index) => (
           <div
@@ -45,10 +44,10 @@ export default function HowWeWorkGrid() {
             className={`relative rounded-xl shadow-lg overflow-hidden 
                         transition-transform duration-300 hover:scale-105
                         ${index % 2 === 0 
-                          ? "xl:translate-y-10" 
-                          : "xl:-translate-y-10"}`}
+                          ? "xl:translate-y-8" 
+                          : "xl:-translate-y-8"}`}
           >
-            {/* Image (HEIGHT KOMANO) */}
+            {/* Image */}
             <img
               src={step.img}
               alt={step.title}
@@ -74,6 +73,7 @@ export default function HowWeWorkGrid() {
           </div>
         ))}
       </div>
+
     </div>
   );
 }
