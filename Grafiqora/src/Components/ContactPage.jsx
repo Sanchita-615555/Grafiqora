@@ -9,7 +9,7 @@ export default function ContactSection() {
       <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 py-6 gap-6">
         
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
                        font-extrabold border-l-4 border-pink-500 pl-4 bg-amber-200 w-fit
                        mt-10 md:mt-0">
           READY TO WORK WITH US?
